@@ -1,0 +1,50 @@
+apply plugin: 'java-library'
+apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.80")
+    }
+}
+
+dependencies {
+    implementation group: 'com.sikulix', name: 'sikulixapi', version: '2.0.5'
+    implementation 'io.qameta.allure:allure-java-commons:2.11.0'
+    implementation 'org.testng:testng:6.14.3'
+    implementation group: 'com.epam.healenium', name: 'healenium-web', version: '3.1.3'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.2'
+    implementation 'com.google.guava:guava:30.1-jre'
+    implementation 'net.serenity-bdd:serenity-junit:2.0.80'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.45'
+    implementation 'net.serenity-bdd:serenity-core:2.0.80'
+    implementation 'org.slf4j:slf4j-simple:1.7.7'
+    implementation "org.junit.jupiter:junit-jupiter-api:5.8.1"
+    implementation "org.junit.jupiter:junit-jupiter-engine:5.8.1"
+    implementation "org.assertj:assertj-core:3.8.0"
+    implementation 'org.slf4j:slf4j-simple:1.7.7'
+
+}
+test.finalizedBy(aggregate)
+test {
+    ignoreFailures = true
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+gradle.startParameter.continueOnFailure = true
