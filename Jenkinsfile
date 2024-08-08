@@ -4,13 +4,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/EdgarLemus/Automatizaci-n_Konex_Innovation.git', branch: 'main'
+                checkout([
+                $class: 'GitSCM',
+                branches: [[name: '*/main']],
+                userRemoteConfigs: [[url: 'https://github.com/EdgarLemus/Automatizaci-n_Konex_Innovation.git']]
+                ])
             }
         }
 
         stage('Build and Test') {
             steps {
-                sh './gradlew clean test aggregate'
+               bat 'gradle clean test aggregate'
             }
         }
     }
