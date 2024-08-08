@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Validación plataforma de YouTube" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-08-07T21:50:35" hostname="LAPTOP-NIA091U9" time="187.071">
+<testsuite name="Validación plataforma de YouTube" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-08-08T00:33:05" hostname="LAPTOP-NIA091U9" time="186.894">
   <properties/>
-  <testcase name="Busqueda de cancion en Youtube" classname="Validación plataforma de YouTube" time="49.901"/>
-  <testcase name="Registro en la plataforma de Youtube" classname="Validación plataforma de YouTube" time="137.166"/>
+  <testcase name="Busqueda de cancion en Youtube" classname="Validación plataforma de YouTube" time="53.663"/>
+  <testcase name="Registro en la plataforma de Youtube" classname="Validación plataforma de YouTube" time="133.224"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 126.0.6478.182 (5b5d8292ddf182f8b2096fa665b473b6317906d5-refs/branch-heads/6478@{#1776}) on port 8359
+  <system-err><![CDATA[Starting ChromeDriver 126.0.6478.182 (5b5d8292ddf182f8b2096fa665b473b6317906d5-refs/branch-heads/6478@{#1776}) on port 46315
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-ago 07, 2024 4:50:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+ago 07, 2024 7:33:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-Starting ChromeDriver 126.0.6478.182 (5b5d8292ddf182f8b2096fa665b473b6317906d5-refs/branch-heads/6478@{#1776}) on port 39512
+Starting ChromeDriver 126.0.6478.182 (5b5d8292ddf182f8b2096fa665b473b6317906d5-refs/branch-heads/6478@{#1776}) on port 11751
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-ago 07, 2024 4:51:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+ago 07, 2024 7:34:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

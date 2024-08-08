@@ -747,13 +747,22 @@ Este comando ejecutara todos los escenarios implementados en el proyecto:
     gradle clean test aggregate
 ```
 
+Este comando ejecutara todos los escenarios en un runner especifico en el proyecto:
 
-
-```cmd
-    7 actionable tasks: 7 executed
+```yml
+    gradle clean test --tests *runners.YoutubeRunner aggregate --info
+```
+```yml
+    gradle clean test --tests *runners.WikipediaRunner aggregate --info
 ```
 
-Al finalizar debemos ingresar y abrir el archivo `index.html` que se encuentra en la siguiente ruta
+Si agregamos al final de cada comando anterior el siguiente comando despues de finalizar la ejecución abrira el reporte de SerenityBDD:
+
+```cmd
+    & cd target/site/serenity & index.html
+```
+
+Al finalizar tambien podemos ingresar y abrir el archivo `index.html` manualmente que se encuentra en la siguiente ruta
 
 ```yml
   <ProyectoName>\target\site\serenity\index.html
