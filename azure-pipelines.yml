@@ -1,0 +1,21 @@
+trigger:
+  - main
+
+pr:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - checkout: none
+
+  - task: CheckoutGitHub@1
+    inputs:
+      repository: 'https://github.com/EdgarLemus/Automatizaci-n_Konex_Innovation.git'
+      branch: 'main'
+
+  - script: |
+      echo "Configurando Gradle..."
+      ./gradlew clean test aggregate
+    displayName: 'Ejecutar pruebas de Gradle'
